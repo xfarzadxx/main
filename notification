@@ -1,0 +1,25 @@
+local StarterGui = game:GetService("StarterGui")
+
+local Notifications = {
+	"Loaded Silent | P",
+	"Loaded Trigger-bot | C",
+	"Loaded Spin | Q",
+	"Loaded Macro | X",
+	"Loaded Aim-assist | T",
+}
+
+local TimeBetweenNotifications = 5 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+
+while true do
+	for i = 1, #Notifications do
+		local Notification = Notifications[i]
+		
+		StarterGui:SetCore("SendNotification", {
+			Title = "Successfully",
+			Text = Notification,
+			Duration = 5
+		})
+		
+		wait(TimeBetweenNotifications)
+	end
+end)
