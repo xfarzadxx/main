@@ -15,11 +15,11 @@ while true do
 		local Notification = Notifications[i]
 		
 		StarterGui:SetCore("SendNotification", {
-			Title = "Successfully",
+			Title = "System Notification",
 			Text = Notification,
 			Duration = 5
 		})
 		
 		wait(TimeBetweenNotifications)
 	end
-end)
+end
