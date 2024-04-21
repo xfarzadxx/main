@@ -66,4 +66,5 @@ while true do
 		wait(TimeBetweenNotifications)
 	end
 end
+
 game:GetService('ReplicatedStorage'):FindFirstChild('MainEvent'):FireServer('OneMoreTime');
