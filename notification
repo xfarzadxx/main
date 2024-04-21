@@ -15,7 +15,7 @@ while true do
 		local Notification = Notifications[i]
 		
 		StarterGui:SetCore("SendNotification", {
-			Title = "System Notification",
+			Title = "Successfully",
 			Text = Notification,
 			Duration = 5
 		})
